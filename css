@@ -1,0 +1,527 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f4f4f4;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.clocks {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ed2127;
+}
+
+.clocks #current-date {
+  color: gray;
+}
+
+.main-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team-name {
+  font-size: 11px !important;
+  color: gray;
+  text-align: left;
+  letter-spacing: -0.05em;
+}
+.key {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cta {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border: 2px solid #cccccc;
+  background: #ffffff;
+  overflow: visible;
+}
+
+.working-hours-overlay {
+  position: absolute;
+  top: 0;
+  left: 37.5%;
+  width: 37.5%;
+  height: 100%;
+  background-color: #e8e8e8;
+  z-index: 0;
+}
+
+.member-hours-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.timeline {
+  position: relative; /* Ensure timeline is positioning context */
+  display: flex;
+  z-index: 2;
+  height: 100%;
+}
+
+.current-time-pin {
+  position: absolute;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  left: -4px;
+}
+
+.timeline div {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  border-right: 1px solid #dddddd;
+  padding-top: 40px;
+  white-space: nowrap;
+}
+
+.markers {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.marker {
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 50px;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+.marker.online {
+  box-shadow: 0 0 8px 3px rgba(0, 255, 0, 0.4);
+}
+
+.legend {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.legend-item {
+  background: #ffffff !important;
+  color: #000000;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 6px solid;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  min-width: 200px;
+}
+
+.fede {
+  background-color: #d500f9;
+}
+.pablo {
+  background-color: #6d4c41;
+}
+.alex_s {
+  background-color: #bf360c;
+}
+.sara {
+  background-color: #ff1744;
+}
+.maddi {
+  background-color: #fdd835;
+}
+.lizzy {
+  background-color: #00e676;
+}
+.matt {
+  background-color: #ff69b4;
+}
+.becky {
+  background-color: #ab47bc;
+}
+.carolyn {
+  background-color: #ff9800;
+}
+.meghan_t {
+  background-color: #4db6ac;
+}
+.shane {
+  background-color: #2979ff;
+}
+.molly {
+  background-color: #ffeb3b;
+}
+.lesley {
+  background-color: #009688;
+}
+.makenzie {
+  background-color: #ff2d55;
+}
+.nathan {
+  background-color: #3949ab;
+}
+.cassie {
+  background-color: #9575cd;
+}
+.zach {
+  background-color: #00b8d4;
+}
+.zoe {
+  background-color: #ff6f00;
+}
+.alex_g {
+  background-color: #8e24aa;
+}
+.katie {
+  background-color: #f44336;
+}
+.meghan_m {
+  background-color: #5c6bc0;
+}
+.michael {
+  background-color: #039be5;
+}
+.rebecca {
+  background-color: #00acc1;
+}
+.kelly {
+  background-color: #558b2f;
+}
+.erin {
+  background-color: #b2ff59;
+}
+.kerry {
+  background-color: #ffd54f;
+}
+.daniel {
+  background-color: #ff7043;
+}
+.laura_r {
+  background-color: #bf360c;
+}
+.monique {
+  background-color: #6d4c41;
+}
+.nicholle {
+  background-color: #7c4dff;
+}
+.rylan {
+  background-color: #00e676;
+}
+.sam {
+  background-color: #d500f9;
+}
+.sela {
+  background-color: #ff4081;
+}
+.trishna {
+  background-color: #f9a825;
+}
+.andrea {
+  background-color: #ff1744;
+}
+.isabel {
+  background-color: #fdd835;
+}
+.fernanda {
+  background-color: #00e676;
+}
+.laura_c {
+  background-color: #ff69b4;
+}
+.nico {
+  background-color: #558b2f;
+}
+
+.legend-item.fede {
+  border-left-color: #d500f9;
+}
+.legend-item.pablo {
+  border-left-color: #6d4c41;
+}
+.legend-item.alex_s {
+  border-left-color: #bf360c;
+}
+.legend-item.sara {
+  border-left-color: #ff1744;
+}
+.legend-item.maddi {
+  border-left-color: #fdd835;
+}
+.legend-item.lizzy {
+  border-left-color: #00e676;
+}
+.legend-item.matt {
+  border-left-color: #ff69b4;
+}
+.legend-item.becky {
+  border-left-color: #ab47bc;
+}
+.legend-item.carolyn {
+  border-left-color: #ff9800;
+}
+.legend-item.meghan_t {
+  border-left-color: #4db6ac;
+}
+.legend-item.shane {
+  border-left-color: #2979ff;
+}
+.legend-item.molly {
+  border-left-color: #ffeb3b;
+}
+.legend-item.lesley {
+  border-left-color: #009688;
+}
+.legend-item.makenzie {
+  border-left-color: #ff2d55;
+}
+.legend-item.nathan {
+  border-left-color: #3949ab;
+}
+.legend-item.cassie {
+  border-left-color: #9575cd;
+}
+.legend-item.zach {
+  border-left-color: #00b8d4;
+}
+.legend-item.zoe {
+  border-left-color: #ff6f00;
+}
+.legend-item.alex_g {
+  border-left-color: #8e24aa;
+}
+.legend-item.katie {
+  border-left-color: #f44336;
+}
+.legend-item.meghan_m {
+  border-left-color: #5c6bc0;
+}
+.legend-item.michael {
+  border-left-color: #039be5;
+}
+.legend-item.rebecca {
+  border-left-color: #00acc1;
+}
+.legend-item.kelly {
+  border-left-color: #558b2f;
+}
+.legend-item.erin {
+  border-left-color: #b2ff59;
+}
+.legend-item.kerry {
+  border-left-color: #ffd54f;
+}
+.legend-item.daniel {
+  border-left-color: #ff7043;
+}
+.legend-item.laura_r {
+  border-left-color: #bf360c;
+}
+.legend-item.monique {
+  border-left-color: #6d4c41;
+}
+.legend-item.nicholle {
+  border-left-color: #7c4dff;
+}
+.legend-item.rylan {
+  border-left-color: #00e676;
+}
+.legend-item.sam {
+  border-left-color: #d500f9;
+}
+.legend-item.sela {
+  border-left-color: #ff4081;
+}
+.legend-item.trishna {
+  border-left-color: #f9a825;
+}
+.legend-item.andrea {
+  border-left-color: #ff1744;
+}
+.legend-item.isabel {
+  border-left-color: #fdd835;
+}
+.legend-item.fernanda {
+  border-left-color: #00e676;
+}
+.legend-item.laura_c {
+  border-left-color: #ff69b4;
+}
+.legend-item.nico {
+  border-left-color: #558b2f;
+}
+
+.current-label {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.current-time-wrapper {
+  position: absolute;
+  top: -22px;
+  height: 82px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Responsive Scroll Wrapper */
+.timeline-scroll-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Default to full-width on larger screens */
+@media (min-width: 768px) {
+  .timeline-scroll-wrapper {
+    overflow-x: hidden;
+  }
+  .timeline-container {
+    box-sizing: border-box;
+    width: 99.9%; /* Slightly smaller to ensure border renders fully */
+  }
+}
+
+/* Allow scrolling on smaller screens */
+@media (max-width: 767px) {
+  .timeline-container {
+    min-width: 1000px; /* You can adjust this width if needed */
+  }
+}
+
+/* Toggle Switch Styles */
+.theme-toggle-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .legend-item {
+  background: #1e1e1e !important;
+  color: #f0f0f0;
+}
+
+body.dark-mode .timeline-container {
+  background: #1e1e1e;
+  border-color: #555555;
+}
+
+body.dark-mode .working-hours-overlay {
+  background-color: #333333;
+}
+
+#globe-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+}
+
+#glow-effect {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: none;
+  transition: box-shadow 1s ease-in-out;
+}
+
+#globe-wrapper:hover #glow-effect {
+  box-shadow: 0 0 20px 10px rgba(237, 33, 39, 0.5);
+}
+
+
+#globe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+#page-header {
+  text-align: center;
+  margin-top: 10px;
+}
