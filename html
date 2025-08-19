@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌎</text></svg>"
+    />
+    <div id="globe-wrapper">
+      <div id="glow-effect"></div>
+      <div id="globe-container"></div>
+    </div>
+    <!-- Load p5.js FIRST -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <reference types="p5" />
+    <script src="sketch.js"></script>
+    <title>Team Time Zones</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Creative Team -->
+    <div class="header">
+      <div class="main-header"><h1>Team Time Zones</h1></div>
+      <div class="clocks">
+        <div id="current-date">--</div>
+        <span id="local-time">--:--</span>
+      </div>
+      <div class="team-name"><h1>Creative, Content and Digital</h1></div>
+      <div class="cta">Hover over team members to view operating hours.</div>
+    </div>
+    <div class="timeline-scroll-wrapper">
+      <div class="timeline-container" id="creative-timeline-container">
+        <div class="working-hours-overlay"></div>
+        <div id="creative-member-overlay" class="member-hours-overlay"></div>
+        <div id="creative-timeline" class="timeline">
+          <div id="creative-current-time-pin" class="current-time-pin"></div>
+        </div>
+        <div id="creative-markers" class="markers"></div>
+      </div>
+    </div>
+    <div id="creative-legend" class="legend"></div>
+
+    <br /><br />
+
+    <!-- Marketing Account Managers Team -->
+    <div class="header">
+      <div class="team-name"><h1>Marketing Account Managers</h1></div>
+      <div class="cta">Hover over team members to view operating hours.</div>
+    </div>
+    <div class="timeline-scroll-wrapper">
+      <div class="timeline-container" id="managers-timeline-container">
+        <div class="working-hours-overlay"></div>
+        <div id="managers-member-overlay" class="member-hours-overlay"></div>
+        <div id="managers-timeline" class="timeline">
+          <div id="managers-current-time-pin" class="current-time-pin"></div>
+        </div>
+        <div id="managers-markers" class="markers"></div>
+      </div>
+    </div>
+    <div id="managers-legend" class="legend"></div>
+
+    <br /><br />
+
+    <!-- PMs and Marketing Ops Team -->
+    <div class="header">
+      <div class="team-name"><h1>Marketing Ops and Mgmt. Services</h1></div>
+      <div class="cta">Hover over team members to view operating hours.</div>
+    </div>
+    <div class="timeline-scroll-wrapper">
+      <div class="timeline-container" id="ops-timeline-container">
+        <div class="working-hours-overlay"></div>
+        <div id="ops-member-overlay" class="member-hours-overlay"></div>
+        <div id="ops-timeline" class="timeline">
+          <div id="ops-current-time-pin" class="current-time-pin"></div>
+        </div>
+        <div id="ops-markers" class="markers"></div>
+      </div>
+    </div>
+    <div id="ops-legend" class="legend"></div>
+
+    <br /><br />
+
+    <!-- Public Relations Team -->
+    <div class="header">
+      <div class="team-name"><h1>Public Relations</h1></div>
+      <div class="cta">Hover over team members to view operating hours.</div>
+    </div>
+    <div class="timeline-scroll-wrapper">
+      <div class="timeline-container" id="pr-timeline-container">
+        <div class="working-hours-overlay"></div>
+        <div id="pr-member-overlay" class="member-hours-overlay"></div>
+        <div id="pr-timeline" class="timeline">
+          <div id="pr-current-time-pin" class="current-time-pin"></div>
+        </div>
+        <div id="pr-markers" class="markers"></div>
+      </div>
+    </div>
+    <div id="pr-legend" class="legend"></div>
+
+    <br /><br />
+
+    <div class="theme-toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+      <span>Dark Mode</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
